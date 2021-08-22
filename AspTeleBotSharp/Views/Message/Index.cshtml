@@ -1,0 +1,61 @@
+﻿@model IEnumerable<AspTeleBotSharp.Models.BotUser>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta charset="utf-8" />
+    <script type="text/javascript">
+        setTimeout(function () {
+            location.reload();
+        }, 3600 );
+    </script>
+</head>
+<body>
+
+    <div id="content">
+        <table class="table">
+            <tr>
+                <th>
+                    @Html.DisplayNameFor(model => model.ID)
+                </th>
+                <th>
+                    @Html.DisplayNameFor(model => model.Nike)
+                </th>
+
+                <th></th>
+            </tr>
+
+            @foreach (var item in Model)
+            {
+                <tr>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.ID)
+                    </td>
+                    <td>
+                        @Html.DisplayFor(modelItem => item.Nike)
+                    </td>
+                    <td>
+                        @foreach (var itemw in item.Messages)
+                        {
+
+                            <table>
+
+                                <tr>
+                                    @itemw;
+                                </tr>
+                            </table>
+                            }
+                        </td>
+               
+                </tr>
+            }
+
+        </table>
+    </div>
+
+
+
+
+
+</body>
+</html>

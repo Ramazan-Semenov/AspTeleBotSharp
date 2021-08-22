@@ -1,0 +1,71 @@
+﻿@model IEnumerable<Telegram.Bot.Types.ReplyMarkups.InlineKeyboardButton>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+<asp:Timer runat="server"></asp:Timer>
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Text)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.CallbackData)
+        </th>
+    
+        <th></th>
+    </tr>
+    @for (int i = 0; i < Model.ToList().Count; i++)
+    {
+        <tr>
+            <td>
+                @Html.DisplayFor(modelItem => Model.ToList()[i].Text)
+            </td>
+            <td>
+                @Html.DisplayFor(modelItem => Model.ToList()[i].CallbackData)
+            </td>
+       
+            <td>
+                @Html.ActionLink("Edit", "Edit", new { id = i }) |
+                @Html.ActionLink("Details", "Details", new { id = i }) |
+                @Html.ActionLink("Delete", "Delete", new { id = i })
+            </td>
+        </tr>
+    }
+    @*@foreach (var item in Model.)
+        {
+            int i = 0;
+            <tr>
+                <td>
+                    @Html.DisplayFor(modelItem => item.replyMarkuppath)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.Text)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.parseMode)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.disableWebPagePreview)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.disableNotification)
+                </td>
+                <td>
+                    @Html.DisplayFor(modelItem => item.replyToMessageId)
+                </td>
+                <td>
+                    @Html.ActionLink("Edit", "Edit", new { id = item }) |
+                    @Html.ActionLink("Details", "Details", new { id = item }) |
+                    @Html.ActionLink("Delete", "Delete", new { id = item })
+                </td>
+            </tr>
+
+        }*@
+
+</table>

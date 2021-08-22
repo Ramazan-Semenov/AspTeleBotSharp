@@ -1,0 +1,21 @@
+﻿@{
+    ViewBag.Title = "Home Page";
+}
+
+
+<div class="jumbotron">
+    @ViewBag.state
+    @*<div>
+            @{Html.RenderPartial("Start"); }
+        </div>*@
+    <form method="post" action="@Url.Action("Start","Home")">
+        <label>Запустить бота</label><br />
+
+        <input type="submit" value="Start" />
+    </form>
+    <form method="post" action="@Url.Action("Stop","Home")">
+        <label>Остановить бота</label><br />
+
+        <input type="submit" value="Stop" />
+    </form>
+</div>

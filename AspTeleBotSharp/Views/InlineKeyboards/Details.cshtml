@@ -1,0 +1,74 @@
+﻿@model AspTeleBotSharp.Models.Entity.InlineKeyboard
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>InlineKeyboard</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Questionsid)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Questionsid)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Text)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Text)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CallBackData)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CallBackData)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.box)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.box)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Image)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Image)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Type)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Type)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.file)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.file)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.Id }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>
